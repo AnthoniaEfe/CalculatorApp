@@ -1,5 +1,6 @@
 $main-fonts: sacramento, sans-serif;
 $main-color: rgb(166,195,226);
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +30,8 @@ main {
   align-content: center;
   justify-content: center;
   min-height: 100vh;
+  width: 50%;
+  margin: 0 auto;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(150px auto) repeat(5, 100px);
 }
@@ -37,13 +40,44 @@ main {
   button{
     cursor: pointer;
     font-family: $main-fonts;
-    font-size: 1.2em; 
+    font-size: 1.5em; 
     outline: none;
     background-color: rgba(255, 255, 255, 0.4);
+    margin: 1px;
+    padding: 5px;
+    border: solid 1px $main-color;
+    border-radius: 5px;
   }
 
   button:hover{
     background-color: rgba(255, 255, 255, 0.9);
 
+  }
+
+  .span-two{
+    grid-column: span 2;
+  }
+  .output{
+    height: 90px;
+    background-color: rgba(19, 9, 51, 0.7);
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+.output{
+  .prev-operand{
+    margin: 1px 3px;
+    font-size: 1.0em;
+    color: rgb(185, 187, 189);
+  }
+  .curr-operand{
+    margin: 1px 3px;
+    font-size: 1.7em;
+    color: rgb(214, 216, 220);
   }
 }
