@@ -1,0 +1,49 @@
+$main-fonts: sacramento, sans-serif;
+$main-color: rgb(166,195,226);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  //background-image: url("./office-implements.jpg");
+  background: linear-gradient(to bottom, rgba(234, 118, 116, 0.5), rgba(62, 88, 145, 0.5));
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.calculator-grid{
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(150px auto) repeat(5, 100px);
+}
+
+.calculator-grid{
+  button{
+    cursor: pointer;
+    font-family: $main-fonts;
+    font-size: 1.2em; 
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+
+  }
+}
