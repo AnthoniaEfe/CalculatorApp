@@ -1,4 +1,4 @@
-$main-fonts: sacramento, sans-serif;
+$main-fonts: Verdana, Geneva, Tahoma, sans-serif;
 $main-color: rgb(166,195,226);
 
 * {
@@ -17,7 +17,7 @@ body {
   //background-image: url("./office-implements.jpg");
   background: linear-gradient(to bottom, rgba(234, 118, 116, 0.5), rgba(62, 88, 145, 0.5));
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 main {
@@ -59,27 +59,23 @@ main {
   }
   .output{
     height: 90px;
-    padding: 5px;
     background-color: rgba(19, 9, 51, 0.7);
-    grid-column: span 4;
+    grid-column: 1/-1;
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
-    justify-content: space-around;
+    justify-content: space-between;
     word-wrap: break-word;
     word-break: break-all;
-    border-radius: 5px;
-    margin-bottom: 5px;
   }
 }
 
 .output{
-  .previous-operand{
+  .prev-operand{
     margin: 1px 3px;
     font-size: 1.0em;
     color: rgb(185, 187, 189);
   }
-  .current-operand{
+  .curr-operand{
     margin: 1px 3px;
     font-size: 1.7em;
     color: rgb(214, 216, 220);
